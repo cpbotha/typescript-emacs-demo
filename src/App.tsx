@@ -5,6 +5,10 @@ import logo from "./logo.svg";
 import "./App.css";
 import { barSpec, barData, imdbSpec } from "./vegaSpecs";
 
+// function breakTheLaw() {
+//   location.href = "javascript:void(0)";
+// }
+
 function App() {
   return (
     <div className="App">
