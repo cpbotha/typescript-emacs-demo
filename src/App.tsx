@@ -1,12 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// starting with React 17 you don't have to import React in TSX files anymore
+import { VegaLite, VisualizationSpec } from "react-vega";
+
+import logo from "./logo.svg";
+import "./App.css";
+import { barSpec, barData, imdbSpec } from "./vegaSpecs";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <VegaLite spec={barSpec as VisualizationSpec} data={barData} />
+        <p>Click on bars to select only that genre</p>
+        {/* use SVG renderer here instead of default canvas */}
+        <VegaLite spec={imdbSpec as VisualizationSpec} renderer="svg" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
