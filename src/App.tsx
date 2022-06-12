@@ -5,9 +5,18 @@ import logo from "./logo.svg";
 import "./App.css";
 import { barSpec, barData, imdbSpec } from "./vegaSpecs";
 
-// function breakTheLaw() {
-//   location.href = "javascript:void(0)";
-// }
+/**
+ * Demonstrate eslint integration by breaking configured eslint rules.
+ *
+ * In this case we were interested in no-script-url.
+ *
+ * Default eslint rules for CRA can be found here:
+ * https://github.com/facebook/create-react-app/blob/main/packages/eslint-config-react-app/index.js
+ */
+function breakTheLaw(bleh: string) {
+  console.log(bleh);
+  location.href = "javascript:void(0)";
+}
 
 function App() {
   return (
